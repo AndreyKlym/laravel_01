@@ -1,7 +1,9 @@
 <?php
-//⊗pplrPmRtSPC
+//⊗pplrPmCnAP
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostController;
+//task #1
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,9 +31,9 @@ Route::get('/city/{name}', function ($name) {
 //    return '!!! post ' . $id;
 //});
 
-Route::get('/post/{slug}', function ($slug){
-    return '!!! post ' . $slug;
-});
+//Route::get('/post/{slug}', function ($slug){
+//    return '!!! post ' . $slug;
+//});
 
 Route::prefix('admin')->group(function(){
     Route::get('/admin/users', function ($id) {
@@ -42,7 +44,27 @@ Route::prefix('admin')->group(function(){
     });
 });
 
-Route::get('/post/all', function (){
-    return 'all';
-})->name('posts');
+//Route::get('/post/all', function (){
+//    return 'all';
+//})->name('posts');
+
+//Route::get(маршрут, [полное имя контроллера, имя действия]);
+//Route::get('/post', ['App\\Http\\Controller\\PostController', 'show']);
+//http://mysite/public/post
+//Route::get('/post', [PostController::class, 'show']);
+//http://mysite/public/post/:id
+Route::get('/post/{id}', [PostController::class, 'show']);
+
+Route::get('/user', [UserController::class, 'show']);
+//http://mysite/public/user/:name
+Route::get('/user/{name}', [UserController::class, 'show']);
+
+//http://mysite/public/user/:surname/:name
+Route::get('/user/{surname}/{name}', [UserController::class, 'show']);
+
+Route::get('/user/all', [UserController::class, 'all']);
+
+//http://mysite/public/user/user2
+//task #1
+Route::get('/user/{name}', [UserController::class, 'show']);
 
