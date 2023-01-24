@@ -31,10 +31,10 @@ class UserController extends Controller
         return 'Hello, alll users';
     }
 
-    public function showUser()
+    public function showuser()
     {
         //return view('user');
-        return view('user', ['name' => 'Nick', 'surname' => 'Smith']);
+        return view('user.showuser', ['name' => 'Nick', 'surname' => 'Smith']);
 
     }
 }

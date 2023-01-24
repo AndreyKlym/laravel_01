@@ -6,8 +6,8 @@
 <body>
     My view
     <br>
-    variable one: {{ $var1 }}
+{{--    variable one: {{ $var1 }}--}}
     <br>
-    variable two: {{ $var2 }}
+{{--    variable two: {{ $var2 }}--}}
 </body>
 </html>
