@@ -51,9 +51,9 @@ Route::prefix('admin')->group(function(){
 //Route::get(маршрут, [полное имя контроллера, имя действия]);
 //Route::get('/post', ['App\\Http\\Controller\\PostController', 'show']);
 //http://mysite/public/post
-//Route::get('/post', [PostController::class, 'show']);
+Route::get('/post', [PostController::class, 'show']);
 //http://mysite/public/post/:id
-Route::get('/post/{id}', [PostController::class, 'show']);
+//Route::get('/post/{id}', [PostController::class, 'show']);
 
 Route::get('/user', [UserController::class, 'show']);
 //http://mysite/public/user/:name
@@ -67,4 +67,7 @@ Route::get('/user/all', [UserController::class, 'all']);
 //http://mysite/public/user/user2
 //task #1
 Route::get('/user/{name}', [UserController::class, 'show']);
+
+//http://mysite/public/user
+Route::get('/user/', [UserController::class, 'showUser']);
 
