@@ -34,7 +34,14 @@ class UserController extends Controller
     public function showuser()
     {
         //return view('user');
-        return view('user.showuser', ['name' => 'Nick', 'surname' => 'Smith']);
-
+        return view('user.showuser', [
+            'name' => 'Nick',
+            'surname' => 'Smith',
+            'age' => 23,
+            'salary' => 1500,
+            'color'=>'color: red;',
+            'text'=>'My search engine',
+            'href'=>'https://www.google.com.ua/'
+        ]);
     }
 }

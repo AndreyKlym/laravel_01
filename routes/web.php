@@ -51,8 +51,8 @@ Route::prefix('admin')->group(function(){
 //Route::get(маршрут, [полное имя контроллера, имя действия]);
 //Route::get('/post', ['App\\Http\\Controller\\PostController', 'show']);
 //http://mysite/public/post
-//Route::get('/post', [PostController::class, 'show']);
-Route::get('/post', [PostController::class, 'showpost']);
+Route::get('/post', [PostController::class, 'show']);
+//Route::get('/post', [PostController::class, 'showpost']);
 //http://mysite/public/post/:id
 //Route::get('/post/{id}', [PostController::class, 'show']);
 

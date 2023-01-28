@@ -3,8 +3,8 @@ namespace App\Http\Controllers;
 
 class PostController extends Controller
 {
-    //public function show()
-    public function showpost()
+    public function show()
+    //public function showpost()
     //public function show($id)
     {
         //return 'hello world';
@@ -23,8 +23,15 @@ class PostController extends Controller
         //return view('test');
         //return view('test', ['var1' => '1', 'var2' => '2']);
 
-        return view('post.show');
-        return view('post.showpost', ['var1' => '1', 'var2' => '2']);
+        //return view('post.show');
+        //return view('post.show', ['var1' => '1', 'var2' => '2']);
+        return view('post.show', [
+            //'title' => 'page title post.show',
+            //'text' => 'page content post.show',
+            'var1'=>'name1',
+            'var2'=>'name2',
+            'var3'=>'name3',
+        ]);
 
     }
 
