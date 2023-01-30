@@ -6,7 +6,10 @@ class PostController extends Controller
     public function show()
     //public function show($id)
     {
-        return view('test');
+        return view('test', [
+            'var1'=>'1',
+            'var2'=>'2',
+            ]);
         //$posts = [
         //    1=>'text 1',
         //    2=>'text 2',
@@ -15,7 +18,6 @@ class PostController extends Controller
         //    5=>'text 5',
         //];
         //return $posts[$id];
-        ////return 'post #'. $id;
-        ////return 'Hello World';
+
     }
 }

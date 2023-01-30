@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 class UserController extends Controller
 {
     //http://mysite/public/user
-    //public function show($surname, $name)
-    ////public function show($name)
-    //{
-    //    return 'Show user '.$surname.' '. $name;
-    //    //return 'Show user '. $name;
-    //}
+    public function show()
+    {
+        return view('user', [
+            'name'=>'Nick',
+            'surname'=>'Smith',
+        ]);
+    }
 
     //http://mysite/public/user/all
     public function all()

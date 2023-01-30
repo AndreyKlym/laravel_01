@@ -52,9 +52,9 @@ Route::get('/', function () {
 //    return 'это запрос вывода /test';
 //});
 
-//Route::get('/test', [PostController::class, 'show']);
+Route::get('/test', [PostController::class, 'show']);
 Route::get('/city', [CityController::class, 'show']);
-//Route::get('/post', [PostController::class, 'show']);
+Route::get('/user', [UserController::class, 'show']);
 
 //http://mysite/public/post/1
 //Route::get('/post/{id}', function ($id) {
