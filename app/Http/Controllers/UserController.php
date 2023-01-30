@@ -6,7 +6,7 @@ class UserController extends Controller
     //http://mysite/public/user
     public function show()
     {
-        return view('user', [
+        return view('user.show', [
             'name'=>'Nick',
             'surname'=>'Smith',
         ]);

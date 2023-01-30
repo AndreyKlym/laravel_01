@@ -9,6 +9,6 @@ class CityController extends Controller
     //http://mysite/public/city
     public function show()
     {
-        return view('city');
+        return view('city.show', ['city'=>'New York']);
     }
 }

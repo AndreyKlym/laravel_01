@@ -5,5 +5,8 @@
 </head>
 <body>
     my city view
+<p>
+    My city is {{$city}}
+</p>
 </body>
 </html>
