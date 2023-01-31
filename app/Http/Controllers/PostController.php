@@ -6,11 +6,11 @@ class PostController extends Controller
     public function show()
     //public function show($id)
     {
-        return view('post.show');
-        //return view('test', [
-        //    'var1'=>'1',
-        //    'var2'=>'2',
-        //    ]);
+        //return view('post.show');
+        return view('post.show', [
+            'text1'=>'page content 1',
+            'text2'=>'page content 2',
+            ]);
         //$posts = [
         //    1=>'text 1',
         //    2=>'text 2',
