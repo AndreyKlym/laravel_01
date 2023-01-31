@@ -8,6 +8,7 @@ class PostController extends Controller
     {
         //return view('post.show');
         return view('post.show', [
+            'title'=>'page title post',
             'text1'=>'page content 1',
             'text2'=>'page content 2',
             ]);

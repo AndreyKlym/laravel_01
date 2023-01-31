@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        page title
+        {{$title}}
     </x-slot>
     page content user.show
         <p>My name is {{$name}}</p>

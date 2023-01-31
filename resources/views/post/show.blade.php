@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        page title
+        {{$title}}
     </x-slot>
     page content post.show
         <p>{{$text1}}</p>
