@@ -11,7 +11,10 @@ class CityController extends Controller
     {
         return view('city.show', [
             'title'=>'page title city',
-            'city'=>'New York'
+            'city'=>'New York',
+            'var1'=>'London',
+            'var2'=>'Warsaw',
+            'var3'=>'Paris',
         ]);
     }
 }

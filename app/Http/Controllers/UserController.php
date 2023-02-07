@@ -6,17 +6,23 @@ class UserController extends Controller
     //http://mysite/public/user
     public function show()
     {
-        return view('user.show', [
+        return view('user.show', ['arr'=>[
+        //return view('user.show', [
             'title'=>'page title user',
             'name'=>'Nick',
             'surname'=>'Smith',
+            'age'=>23,
+            'var'=>'main',            ]
         ]);
     }
 
     //http://mysite/public/user/all
     public function all()
     {
-        return 'Show users all';
+        return view('user.show',['arr'=> ['name'=>'John', 'age'=>34, 'salary'=>1244]]);
+        //return view('test',['arr'=> [11, 22]]);
+        //return view('user.test',['arr'=> [11, 22]]);
+        //return 'Show users all';
     }
 
     //public function show($name)

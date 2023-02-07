@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ArticleController;
@@ -19,7 +20,11 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/post/{id}', [PostController::class, 'show']);
+//Route::get('/test/', [TestController::class, 'test']);
 //Route::get('/post', [PostController::class, 'show']);
+
+//http://mysite/public/test
+Route::get('/test', [TestController::class, 'main']);
 
 //http://mysite/public/city
 Route::get('/city', [CityController::class, 'show']);
@@ -34,9 +39,7 @@ Route::get('/city', [CityController::class, 'show']);
 //Route::get('/user/all', [UserController::class, 'all']);
 
 
-Route::get('/user/{name}', [UserController::class, 'show']);
-
-
+//Route::get('/user/{name}', [UserController::class, 'show']);
 
 
 
@@ -53,6 +56,7 @@ Route::get('/', function () {
 //});
 
 Route::get('/post', [PostController::class, 'show']);
+//Route::get('/test', [UserController::class, 'all']);
 //Route::get('/test', [PostController::class, 'show']);
 Route::get('/city', [CityController::class, 'show']);
 Route::get('/user', [UserController::class, 'show']);
