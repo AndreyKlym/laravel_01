@@ -12,8 +12,15 @@ class UserController extends Controller
             'name'=>'Nick',
             'surname'=>'Smith',
             'age'=>23,
-            'var'=>'main',            ]
-        ]);
+            'var'=>'main',]
+            //'year'=>2018
+            ], ['myData'=>[
+                'year'=>2022,
+                'mounth'=>'May',
+                'day'=>'Sunday'
+                ]
+            ]
+        );
     }
 
     //http://mysite/public/user/all
