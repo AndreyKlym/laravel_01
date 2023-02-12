@@ -60,6 +60,9 @@ Route::get('/post', [PostController::class, 'show']);
 //Route::get('/test', [PostController::class, 'show']);
 Route::get('/city', [CityController::class, 'show']);
 Route::get('/user', [UserController::class, 'show']);
+Route::get('/user/main', [UserController::class, 'main']);
+Route::get('/user/employ', [UserController::class, 'employ']);
+Route::get('/users', [UserController::class, 'all']);
 
 //http://mysite/public/post/1
 //Route::get('/post/{id}', function ($id) {
@@ -90,9 +93,9 @@ Route::get('/user', [UserController::class, 'show']);
 //    return 'страница номер '. $page;
 //});
 
-Route::get('/post/all', function () {
-    return 'all';
-})->name('posts');
+//Route::get('/post/all', function () {
+//    return 'all';
+//})->name('posts');
 
 
 
