@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CityController;
@@ -56,12 +57,19 @@ Route::get('/', function () {
 //});
 
 Route::get('/post', [PostController::class, 'show']);
+Route::get('/employe', [PostController::class, 'lab']);
+Route::get('/task', [TaskController::class, 'show']);
+Route::get('/find', [TaskController::class, 'find']);
+Route::get('/access', [TaskController::class, 'access']);
+Route::get('/current', [TaskController::class, 'current']);
+
 //Route::get('/test', [UserController::class, 'all']);
 //Route::get('/test', [PostController::class, 'show']);
 Route::get('/city', [CityController::class, 'show']);
 Route::get('/user', [UserController::class, 'show']);
 Route::get('/user/main', [UserController::class, 'main']);
 Route::get('/user/employ', [UserController::class, 'employ']);
+//Route::get('/user/employ', [UserController::class, 'lab']);
 Route::get('/users', [UserController::class, 'all']);
 
 //http://mysite/public/post/1

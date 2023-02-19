@@ -28,4 +28,12 @@ class PostController extends Controller
         //return $posts[$id];
 
     }
+
+    public function lab()
+    {
+        return view('post.employ',
+            ['dataMod'=>[11,22,0,33,44,55,0,66]] );
+    }
+
+
 }

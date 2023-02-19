@@ -68,6 +68,7 @@ class UserController extends Controller
     public function employ()
     {
         return view('user.employ',
+        //['dataMod'=>[11,22,33,44,55]
          [	'employees' => [
              [
                  'name' => 'user1',
@@ -88,6 +89,9 @@ class UserController extends Controller
          ]
         );
     }
+
+
+
     //public function show($name)
     //{
     //    $users = [
